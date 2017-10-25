@@ -53,7 +53,7 @@ edit_comment GET    /comments/:id/edit(.:format) comments#edit
 ```
 
 ```
-Hex | Use
+Hex     | Use
 #05668D | 
 #028090 |
 #00A896 |
