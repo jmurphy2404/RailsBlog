@@ -51,3 +51,15 @@ edit_comment GET    /comments/:id/edit(.:format) comments#edit
              PUT    /users/:id(.:format)         users#update
              DELETE /users/:id(.:format)         users#destroy
 ```
+
+```
+Hex | Use
+#05668D | 
+#028090 |
+#00A896 |
+#02C39A |
+#F0F3BD | Text
+
+https://coolors.co/05668d-028090-00a896-02c39a-f0f3bd
+
+```
