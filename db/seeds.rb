@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create ([
+	{fullname: "Elise Barnes", username: "barnese3", email: "barnese3@go.stockton.edu", password: "password"},
+	{fullname: "John Murphy", username: "johnm", email: "jmurphy@gmail.com", password: "password123"}
+])
+
+Post.create ([
+	{user_id: 1, body: "This is my post", title: "Post One"},
+	{user_id: 2, body: "This is another post", title: "My Post"}
+])
+
+Comment.create ([
+	{post_id: 1, user_id: 1, comment: "This is a comment"},
+	{post_id: 2, user_id: 2, comment: "Another comment"}
+])
