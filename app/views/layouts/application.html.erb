@@ -9,7 +9,15 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  	<nav>
+      <ul>
+        <li><%= link_to "Home", :root %></li>
+        <li><%= link_to "Posts", :posts %></li>
+        <li><%= link_to "Users", :users %></li>
+      </ul>
+	</nav>
+   <%= yield %>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc&callback=initMap" type="text/javascript"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc&libraries=places"></script>
   </body>

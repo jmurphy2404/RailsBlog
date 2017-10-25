@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'home#index'
+  get '/' => 'home#index', as: :root
   resources :comments
   resources :posts
   resources :users
