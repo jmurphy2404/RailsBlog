@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171025152208) do
     t.integer "user_id"
     t.string "body"
     t.string "title"
-    t.string "picture"
+    t.string "image"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
