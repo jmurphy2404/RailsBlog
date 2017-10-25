@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+  	<nav>
+      <ul>
+        <li><%= link_to "Home", :root %></li>
+        <li><%= link_to "Posts", :posts %></li>
+        <li><%= link_to "Users", :users %></li>
+      </ul>
+	</nav>
+   <%= yield %>
   </body>
 </html>
