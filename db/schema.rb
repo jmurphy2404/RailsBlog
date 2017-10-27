@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20171026142457) do
     t.string "title"
     t.string "image"
     t.string "location"
-    t.integer "latitude"
-    t.integer "longitude"
+    t.float "latitude"
+    t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
