@@ -1,29 +1,6 @@
-# README
+# RAILS BLOG PROJECT NYCDA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
+#Routing
 ```
       Prefix Verb   URI Pattern                  Controller#Action
     comments GET    /comments(.:format)          comments#index
@@ -52,10 +29,11 @@ edit_comment GET    /comments/:id/edit(.:format) comments#edit
              DELETE /users/:id(.:format)         users#destroy
 ```
 
+#Palate
 ```
 Hex     | Use
 #05668D | 
-#028090 |
+#028090 | Transparent background for text
 #00A896 |
 #02C39A |
 #F0F3BD | Text
@@ -64,6 +42,7 @@ https://coolors.co/05668d-028090-00a896-02c39a-f0f3bd
 
 ```
 
+#API Key
 ```
 Google Maps Javascript API key = AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc
 

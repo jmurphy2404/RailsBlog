@@ -1,48 +1,55 @@
+<body id="post-body">
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="post-title" id="post-title">
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
 
-<p>
+<p class="post-title" id="post-body">
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
 
-<%= image_tag(@post.image.url) if @post.image? %>
 
-<p>
+<div id="post-map-img">
+<div id="post-image">
+<%= image_tag(@post.image.url) if @post.image? %>
+</div>
+<div id="map"></div>
+</div>
+
+<p class="post-title" id="post-location">
   <strong>Location:</strong>
   <%= @post.location %>
 </p>
 
-<p>
+<p class="post-title" id="post-latitude">
+  <strong>Latitude:</strong>
+  <%= @post.latitude %>
+</p>
+
+<p class="post-title" id="post-longitude">
+  <strong>Longitude:</strong>
+  <%= @post.longitude %>
+</p>
+
+<p class="post-title" id="post-comments">
 	<strong>Comments:</strong>
 	<% @post.comments.each do |c| %>
     	<p><%= c.comment %> By: <%= c.user.fullname %></p>
 	<% end %>
 </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @post.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @post.longitude %>
-</p>
 <%= javascript_include_tag "map" %>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc"></script>
-<div id="map"></div>
-
 
 <script>
 	let lat = <%= @post.latitude %>;
 	let lng = <%= @post.longitude %>;
 </script>
 
-
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+</body>
