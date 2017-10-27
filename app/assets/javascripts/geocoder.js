@@ -4,6 +4,7 @@ let coords;
 
 
 
+
 document.addEventListener("DOMContentLoaded", function(){
 	geocoder = new google.maps.Geocoder();
 	address = document.getElementById("post[location]")
@@ -36,9 +37,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	})
 })
-
-
-//CHANGE DATA TYPE FOR LAT AND LNG
 
 
 // document.addEventListener("turbolinks:load", function(){
