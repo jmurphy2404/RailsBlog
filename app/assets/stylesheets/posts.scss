@@ -8,4 +8,65 @@
 #map{
 	height: 300px;
 	width: 300px;
+	display: inline-block;
+	margin-left: 50px;
 }
+
+.post-title{
+	color: #F0F3BD;
+	// background-color: #028090;
+	border: 1px solid #00A896;
+	width: 750px;
+	display: block;
+	margin: 5px auto;
+	padding: 2px;
+}
+
+#post-body{
+	background-color:  #028090;
+	padding: 2px;
+}
+
+#post-image{
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+}
+
+#post-map-img{
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+.post-form{
+	background-color:  #028090;
+	color: #F0F3BD;
+	border: 1px solid #00A896;
+	width: 400px;
+	display: block;
+	margin: 5px auto;
+}
+
+#new-post-title{
+	color: #F0F3BD;
+}
+
+#post-back{
+	color: #F0F3BD;		
+}
+
+img{
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+} 
+	
+
+// Hex     | Use
+// #05668D | 
+// #028090 | Background Color
+// #00A896 | Border Color
+// #02C39A |
+// #F0F3BD | Text

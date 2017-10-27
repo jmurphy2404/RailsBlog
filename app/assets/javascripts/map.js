@@ -8,4 +8,4 @@
         });
       }
 
-setTimeout(initMap, 10)
+setTimeout(initMap, 10);
