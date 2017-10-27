@@ -10,7 +10,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @comments = Comment.all
+    @comment = Comment.new
+    @comment.user_id = current_user.id if user_signed_in?
+    @comment.post_id = @post.id
   end
 
   # GET /posts/new
