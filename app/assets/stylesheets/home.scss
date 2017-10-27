@@ -186,6 +186,16 @@
 	font-size: 40px;
 }
 
+.homePic {
+	width: 100%;
+	text-align: center;
+
+	img {
+		width: 800px;
+		padding-bottom: 75px;
+	}
+}
+
 .homeFooter {
 	position: absolute;
 	bottom: 0;

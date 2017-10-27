@@ -2,7 +2,7 @@
 <div class="home">
 <div class="homeButtons">
 <% if user_signed_in? %>
-	<%= link_to "New Post", :new_post %>
+	<button><%= link_to "New Post", :new_post %></button>
 	<button class="log"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
 <% end %>
 <% if !user_signed_in? %>
@@ -39,6 +39,11 @@
 		<p class="imageuser">By: <%= p.user.fullname %></p>
 	</div>
 	<% end %>
+</div>
+
+
+<div class="homePic">
+	<img src="https://20843-presscdn-pagely.netdna-ssl.com/wp-content/themes/pf-youngadventuress-2016/img/map.jpg" />
 </div>
 
 <footer class="homeFooter">
