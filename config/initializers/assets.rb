@@ -16,3 +16,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( map.js )
 
 Rails.application.config.assets.precompile += %w( geocoder.js )
+
+
+Rails.application.config.assets.precompile += %w( home.js )
