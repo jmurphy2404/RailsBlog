@@ -24,7 +24,8 @@
   <strong>Location:</strong>
   <%= @post.location %>
 </p>
-
+  
+<p>
 <p class="post-title" id="post-latitude">
   <strong>Latitude:</strong>
   <%= @post.latitude %>
@@ -42,6 +43,10 @@
 	<% end %>
 </p>
 
+<% if user_signed_in? %>
+	<%= render 'comments/form', comment: @comment %>
+<% end %>
+
 <%= javascript_include_tag "map" %>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc"></script>
 
@@ -50,6 +55,12 @@
 	let lng = <%= @post.longitude %>;
 </script>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<% if user_signed_in? %>
+	<% if current_user.id == @post.user_id %>
+		<%= link_to 'Edit', edit_post_path(@post) %>
+	<% end %>
+<% end %>
+
 <%= link_to 'Back', posts_path %>
 </body>
+

@@ -15,14 +15,6 @@
         <li><%= link_to "Home", :root %></li>
         <li><%= link_to "Posts", :posts %></li>
         <li><%= link_to "Users", :users %></li>
-        <% if user_signed_in? %>
-          <li><%= link_to "New Post", :new_post %></li>
-          <li class="log"><button><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button></li>
-        <% end %>
-        <% if !user_signed_in? %>
-          <li class="log"><button class="sign">Sign Up</button></li>
-          <li class="log"><button class="login">Log In</button></li>
-        <% end %>
       </ul>
 	</nav>
     
@@ -30,5 +22,6 @@
   <p class="alert"><%= alert %>
 
   <%= yield %>
+
   </body>
 </html>

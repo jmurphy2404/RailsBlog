@@ -1,4 +1,15 @@
 <%= javascript_include_tag "home" %>
+<div class="home">
+<div class="homeButtons">
+<% if user_signed_in? %>
+	<%= link_to "New Post", :new_post %>
+	<button class="log"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
+<% end %>
+<% if !user_signed_in? %>
+	<button class="sign">Sign Up</button>
+	<button class="login">Log In</button>
+<% end %>
+</div>
 
 <div class="headerImage">
 	<div class="headerText">
@@ -28,4 +39,9 @@
 		<p class="imageuser">By: <%= p.user.fullname %></p>
 	</div>
 	<% end %>
+</div>
+
+<footer class="homeFooter">
+	© 2017 CornersOfTheWorld.com
+</footer>
 </div>
