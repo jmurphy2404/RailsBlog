@@ -5,6 +5,8 @@
 <%= link_to 'Destroy', post: @post, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc&libraries=places" type="text/javascript"></script>
+<%= javascript_include_tag "geocoder" %>
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
