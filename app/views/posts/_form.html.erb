@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -11,29 +13,29 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="post-form">
     <%= form.label :title %>
     <%= form.text_field :title, id: :post_title %>
   </div>
 
-  <div class="field">
+  <div class="post-form">
     <%= form.label :body %>
     <%= form.text_area :body, id: :post_body %>
   </div>
 
-  <div class="field">
+  <div class="post-form">
     <%= form.label :image %>
     <%= form.file_field :image %>
   </div>
 
-<div class="field">
+<div class="post-form">
   <label>Location</label>
-  <input name="post[location]" id="post[location]"></input>
+  <input name="post[location]" id="location"></input>
   <button type="button" id="geocoder_submit">First: Click to Calculate Coordinates</button>
   <label>Latitude</label>
-  <input name="post[latitude]" id="post[latitude]"></input><br>
+  <input name="post[latitude]" id="latitude"></input><br>
   <label>Longitude</label>
-  <input name="post[longitude]" id="post[longitude]"></input><br>
+  <input name="post[longitude]" id="longitude"></input><br>
 </div>
 
   <div class="actions" id="submit-post">
