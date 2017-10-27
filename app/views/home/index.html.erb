@@ -1,2 +1,29 @@
-<h1>Home Page</h1>
-<%= render 'users/form', user: User.new %>
+<div class="headerImage">
+	<div class="headerText">
+		<h1>CORNERS OF THE WORLD</h1>
+		<p>Publish your tavel stories</p>
+		<button class="signupbutton">SIGN UP NOW<i class="fa fa-plane" aria-hidden="true"></i></button>
+	</div>
+</div>
+
+<div class="signupmodal">
+	<span class="signupclose">&times;</span> 
+	<%= render 'devise/registrations/form_new' %>
+</div>
+
+<div class="loginmodal">
+	<span class="loginclose">&times;</span> 
+	<%= render 'devise/sessions/form' %>
+</div>
+
+<h1 class="imageH">Recent Posts</h1>
+
+<div class="imageGallery">
+	<% @posts.each do |p| %>
+	<div class="singleImage">
+		<%= image_tag(p.image.url) if p.image? %>
+		<p class="imagetitle"><%= link_to p.title, p %></p>
+		<p class="imageuser">By: <%= p.user.fullname %></p>
+	</div>
+	<% end %>
+</div>
