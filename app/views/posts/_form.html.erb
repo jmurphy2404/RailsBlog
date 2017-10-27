@@ -26,17 +26,18 @@
     <%= form.file_field :image %>
   </div>
 
-  <div class="field">
-    <%= form.label :picture %>
-    <%= form.text_field :picture, id: :post_picture %>
-  </div>
+<div class="field">
+  <label>Location</label>
+  <input name="post[location]" id="post[location]"></input>
+  <button type="button" id="geocoder_submit">Calculate Coordinates</button>
+  <label>Latitude</label>
+  <input name="post[latitude]" id="post[latitude]"></input><br>
+  <label>Longitude</label>
+  <input name="post[longitude]" id="post[longitude]"></input><br>
+</div>
 
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :post_location %>
-  </div>
-
-  <div class="actions">
+  <div class="actions" id="submit-post">
     <%= form.submit %>
   </div>
+
 <% end %>
