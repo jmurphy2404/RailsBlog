@@ -1,35 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="postscontain">
+  <div class="allpostsimg">
+    <img src="https://20843-presscdn-pagely.netdna-ssl.com/wp-content/themes/pf-youngadventuress-2016/img/map.jpg" />
+  </div>
+  <h1 class="allpostsheader">All Users</h1>
+</div>
 
-<h1>Users</h1>
-
+<div class="usertable">
 <table>
-  <thead>
-    <tr>
-      <th>Fullname</th>
-      <th>Username</th>
-      <th>Email</th>
-      <th>Password</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.fullname %></td>
-        <td><%= user.username %></td>
-        <td><%= user.email %></td>
-        <td><%= user.password %></td>
-        <td><%= user.image %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="userimage"><%= image_tag(user.image) if user.image? %></td>
+        <td class="useruser"><%= link_to user.fullname, user %></td>
+        <% if user_signed_in? %>
+        <% if current_user.id == user.id %>
+           <td class="editdestroy"><%= link_to 'Delete My Account', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <td class="editdestroy"><%= link_to 'Edit My Account', edit_user_path(user) %></td>
+        <% end %>
+        <% end %>
       </tr>
     <% end %>
-  </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
+</div>

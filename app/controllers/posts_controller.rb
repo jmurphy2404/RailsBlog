@@ -18,6 +18,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @post.user_id = current_user.id if user_signed_in?
   end
 
   # GET /posts/1/edit

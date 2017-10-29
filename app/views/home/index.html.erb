@@ -2,8 +2,9 @@
 <div class="home">
 <div class="homeButtons">
 <% if user_signed_in? %>
+	<button><%= link_to "My Account", current_user %></button>
 	<button><%= link_to "New Post", :new_post %></button>
-	<button class="log"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
+	<button><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
 <% end %>
 <% if !user_signed_in? %>
 	<button class="sign">Sign Up</button>
@@ -14,8 +15,8 @@
 <div class="headerImage">
 	<div class="headerText">
 		<h1>CORNERS OF THE WORLD</h1>
-		<p>Publish your tavel stories</p>
-		<button class="signupbutton">SIGN UP NOW<i class="fa fa-plane" aria-hidden="true"></i></button>
+		<p>Publish your travel stories</p>
+		<div class="signupbutton"><button>SIGN UP NOW</button><i class="fa fa-plane" aria-hidden="true"></i></div>
 	</div>
 </div>
 

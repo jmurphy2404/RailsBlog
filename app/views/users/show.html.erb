@@ -1,7 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="showuser">
+
+<div class="postscontain">
+  <div class="allpostsimg">
+    <img src="https://20843-presscdn-pagely.netdna-ssl.com/wp-content/themes/pf-youngadventuress-2016/img/map.jpg" />
+  </div>
+  <h1 class="allpostsheader"><%= @user.fullname %></h1>
+</div>
+
+<p class="usershowimage">
+  <%= image_tag(@user.image) if @user.image? %>
+</p>
 
 <p>
-  <strong>Fullname:</strong>
+  <strong>Name:</strong>
   <%= @user.fullname %>
 </p>
 
@@ -15,15 +26,5 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @user.image %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<p class="editdestroy"><%= link_to 'Edit My Account', edit_user_path(@user) %></p>
+</div>
