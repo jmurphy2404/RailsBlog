@@ -11,12 +11,6 @@
       <tr>
         <td class="userimage"><%= image_tag(user.image) if user.image? %></td>
         <td class="useruser"><%= link_to user.fullname, user %></td>
-        <% if user_signed_in? %>
-        <% if current_user.id == user.id %>
-           <td class="editdestroy"><%= link_to 'Delete My Account', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-           <td class="editdestroy"><%= link_to 'Edit My Account', edit_user_path(user) %></td>
-        <% end %>
-        <% end %>
       </tr>
     <% end %>
 </table>
