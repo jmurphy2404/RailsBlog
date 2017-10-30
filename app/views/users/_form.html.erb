@@ -27,13 +27,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :password %>
-    <%= form.text_field :password, id: :user_password %>
+    <%= form.label :password %> 
+    <%= form.password_field :password, id: :user_password %>
+    <p><em>must enter password to update</em></p>
   </div>
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_field :image, id: :user_image %>
+    <%= form.file_field :image %>
   </div>
 
   <div class="actions">

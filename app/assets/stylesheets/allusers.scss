@@ -1,0 +1,61 @@
+.userimage img {
+	width: 75px;
+	height: 75px;
+	border-radius: 100%;
+}
+
+.editdestroy a {
+	text-decoration: none;
+	font-style: italic;
+	color: #028090;
+}
+
+.editdestroy {
+	text-align: center;
+}
+
+.useruser a {
+	text-decoration: none;
+	color: #028090;
+}
+
+.usertable {
+	width: 100%;
+	text-align: center;
+
+	table {
+		padding-top: 30px;
+		width: 100%;
+		text-align: center;
+
+		.userimage {
+			text-align: right;
+			padding-bottom: 50px;
+		}
+
+		.useruser {
+			text-align: left;
+			font-style: italic;
+			padding-bottom: 50px;
+		}
+
+	}
+
+}
+
+.usershowimage img {
+	width: 250px;
+	height: 250px;
+	border-radius: 100%;
+	margin-bottom: 20px;
+}
+
+.showuser {
+	width: 100%;
+	text-align: center;
+}
+
+.editaccount {
+	width: 100%;
+	text-align: center;
+}

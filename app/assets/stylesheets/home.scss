@@ -30,8 +30,13 @@
 	button {
 		cursor: pointer;
 		background-color: white;
-		border-color: black;
-		border-style: solid;
+		border: none;
+		color: #028090;
+
+		a {
+			text-decoration: none;
+			color: #028090;
+		}
 	}
 }
 
@@ -72,26 +77,53 @@
 	button {
 		padding: 5px;
 		background-color: Transparent;
-		border: 1.5px solid black;
+		border: none;
 		cursor: pointer;
+		padding: 8px;
 
 		i {
 			font-size: 20px;
-			padding-left: 5px;
+			padding-left: 10px;
 		}
 	}
 }
 
+.signupbutton {
+	border-style: solid;
+	border-radius: 12px;
+	border-width: 1.5px;
+	width: 200px;
+	text-align: center;
+	margin-left: 42%;
+}
+
 .signupbutton:hover {
-	font-size: 30px;
-	color: #028090;
-	border: 1.5px solid #028090;
+	border: none;
+}
+
+.signupbutton:hover > button {
+	opacity: 0;
+}
+
+.signupbutton:hover > i {
+	opacity: 1;
+	margin-left: -50%;
+	font-size: 100px;
+	cursor: pointer;
+	transition: .2s ease;
+}
+
+.signupmodal {
+	height: 650px;
+}
+
+.loginmodal {
+	height: 500px;
 }
 
 .signupmodal,
 .loginmodal {
-	width: 350px;
-	height: 400px;
+	width: 650px;
 	position: fixed;
 	background-color: white;
 	text-align: center;
@@ -101,14 +133,65 @@
 	z-index: 1;
 	cursor: pointer;
 	display: none;
+	opacity: 0.95;
+	border-color: #028090;
+	border-style: solid;
+	border-radius: 12px;
 
 	.signupclose,
 	.loginclose {
 		position: absolute;
-		padding: 1%;
+		padding: 3%;
+		font-size: 25px;
 		top: 0;
 		right: 0;
 	}
+}
+
+.signIN {
+	color: #028090;
+	padding-bottom: 30px;
+	border-bottom: solid;
+	font-size: 40px;
+}
+
+.signup {
+	padding-bottom: 20px;
+
+	p, i {
+		padding: 0;
+		margin: 0;
+		font-size: 25px;
+	}
+
+	p {
+		padding-bottom: 15px;
+	}
+
+	input {
+		border-color: #028090;
+		border-style: solid;
+		border-radius: 12px;
+		height: 40px;
+		font-size: 30px;
+		margin-bottom: 15px;
+	}
+}
+
+.submitsignup input {
+	background-color: white;
+	cursor: pointer;
+}
+
+.loginsubmit input {
+	cursor: pointer;
+	background-color: white;
+	border-color: #028090;
+	border-style: solid;
+	border-radius: 12px;
+	width: 200px;
+	height: 35px;
+	font-size: 25px;
 }
 
 .imageGallery {
@@ -182,8 +265,8 @@
 	margin-top: 5%;
 	width: 100%;
 	text-align: center;
-	font-weight: 100;
 	font-size: 40px;
+	font-weight: normal;
 }
 
 .homePic {
@@ -191,7 +274,7 @@
 	text-align: center;
 
 	img {
-		width: 800px;
+		width: 1000px;
 		padding-bottom: 75px;
 	}
 }
