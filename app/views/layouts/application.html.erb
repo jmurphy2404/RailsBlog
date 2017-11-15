@@ -14,6 +14,9 @@
       <ul>
         <li><%= link_to "Home", :root %></li>
         <li><%= link_to "Posts", :posts %></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "New Post", :new_post%></li>
+        <% end %>
         <li><%= link_to "Users", :users %></li>
       </ul>
 	</nav>
