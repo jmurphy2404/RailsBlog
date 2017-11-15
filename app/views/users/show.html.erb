@@ -26,6 +26,13 @@
   <%= @user.email %>
 </p>
 
+<p>
+  <strong>Posts:</strong>
+  <% @user.posts.each do |p| %>
+  <p class="userpostlist"><%= link_to p.title, p %></p>
+  <% end %>
+</p>
+
 <% if user_signed_in? %>
 	<% if current_user.id == @user.id %>
 	<p class="editdestroy"><%= link_to 'Edit My Account', edit_user_path(@user) %></p>
