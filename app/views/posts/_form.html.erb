@@ -33,6 +33,9 @@
     <%= form.file_field :image %>
   </div>
 
+<%= javascript_include_tag "geocoder" %>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPJJsoaUUfc25r2O8ZSHIv5pFRHPHgaIc"></script>
+
 <div class="post-form">
   <label>Location</label>
   <input name="post[location]" id="location"></input>
